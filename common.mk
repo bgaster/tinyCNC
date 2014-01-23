@@ -2,7 +2,7 @@
 # License: See the file license.
 
 CXX=clang++
-CXXFLAGS=-Wunused-comparison -O0 -m64 -g -stdlib=libc++ -std=c++0x -F /Library/Frameworks -DNDEBUG -D__DEBUG__=1 -I./include -I../arduino/lib/include -I./src 
+CXXFLAGS=-Wunused-comparison -O0 -m64 -g -stdlib=libc++ -std=c++0x -F /Library/Frameworks -DNDEBUG -D__DEBUG__=1 -I./include -I./arduino/include -I./src 
 
 CC=clang
 CCFLAGS=-O2 -m64 
