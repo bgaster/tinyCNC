@@ -16,5 +16,7 @@
 }
 
 - (IBAction)do_open:(id)sender;
+- (IBAction)renderer_tinyCNC:(id)sender;
+- (IBAction)renderer_tinyWIN:(id)sender;
 
 @end

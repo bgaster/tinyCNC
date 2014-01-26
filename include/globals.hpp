@@ -8,8 +8,12 @@
 
 #include <memory>
 
+#include "arduino-serial.hpp"
+
 #include "gcode.hpp"
 #include "renderer.hpp"
 
-extern 	std::shared_ptr<gcode> gcode_g;
+
+extern std::shared_ptr<gcode> gcode_g;
 extern std::shared_ptr<renderer> renderer_g;
+extern std::shared_ptr<arduino::serial> aserial_port_g;

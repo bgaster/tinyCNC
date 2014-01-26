@@ -84,7 +84,7 @@ public:
                   str = "G" + to_str(v) + " X" + to_str(x) + " Y" + to_str(y) + "\n";
               },
               [&str] (unsigned int v, float x) {
-                  str = "M" + to_str(v) + " X" + to_str(x) + "\n";
+                  str = "M" + to_str(v) + " S" + to_str(x) + "\n";
               });
         
         return str;
@@ -100,8 +100,11 @@ public:
         return value_ == v;
     }
     
-    float get_argument(unsigned int i)
+    float get_argument(unsigned int i, bool b = false)
     {
+        if (b) {
+            printf("(%d, %f\n", i, arguments_[i]);
+        }
         return arguments_[i];
     }
 };
@@ -128,12 +131,11 @@ private:
     }
     
     bool parse_type(
-	std::string line,
-	ID_TYPE t,
-	std::shared_ptr<gcode_entry> entry,
-	std::string tstr,
-	std::initializer_list<match_arg_t> params
-	)
+        std::string line,
+        ID_TYPE t,
+        std::shared_ptr<gcode_entry> entry,
+        std::string tstr,
+        std::initializer_list<match_arg_t> params)
     {
 	// check code matches
 	if (line.compare(0, tstr.length(), tstr) != 0) {
@@ -172,11 +174,12 @@ private:
 			    matches,
 			    std::regex( 
 				"(" + std::get<0>(*iargs) + ")" + std::get<1>(*iargs)))) {
-			result = false;
-			return;
+                    result = false;
+                    return;
 		    }
 
-		    entry->arguments_.push_back(std::stof(matches[2]));
+		    entry->arguments_.push_back(std::stof(matches[2]));        
+            
 		    iargs++;		    
 		}
 	    });

@@ -12,3 +12,4 @@
 
 std::shared_ptr<gcode> gcode_g(nullptr);
 std::shared_ptr<renderer>  renderer_g(nullptr);
+std::shared_ptr<arduino::serial> aserial_port_g(nullptr);
