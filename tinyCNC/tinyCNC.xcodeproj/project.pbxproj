@@ -446,10 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tinyCNC/tinyCNC-Prefix.pch";
 				INFOPLIST_FILE = "tinyCNC/tinyCNC-Info.plist";
-				OTHER_LDFLAGS = (
-					"-L/usr/local/lib",
-					"-lmare",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -466,10 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tinyCNC/tinyCNC-Prefix.pch";
 				INFOPLIST_FILE = "tinyCNC/tinyCNC-Info.plist";
-				OTHER_LDFLAGS = (
-					"-L/usr/local/lib",
-					"-lmare",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
