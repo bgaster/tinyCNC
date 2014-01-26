@@ -19,9 +19,11 @@
 #include <tuple>
 #include <initializer_list>
 #include <algorithm>
+#include <functional>
 
-#include <error_exception.hpp>
-#include <debug.hpp>
+#include "error_exception.hpp"
+#include "debug.hpp"
+#include "util.hpp"
 
 enum class ID_TYPE
 {
@@ -36,8 +38,27 @@ enum class ARG_TYPE
     // currently we only support these arguments but designed to support more
 };
 
-struct gcode_entry
+class gcode_entry
 {
+private:
+    void apply(
+        std::function<void (unsigned int, float, float)> g,
+        std::function<void (unsigned int, float)> m)
+    {
+        switch(type_) {
+            case ID_TYPE::GCODE:
+                g(value_, arguments_[0], arguments_[1]);
+                break;
+            case ID_TYPE::MCODE:
+                m(value_, arguments_[0]);
+                break;
+            default:
+                // don't current support and so don't print
+                return;
+        }
+    }
+public:
+    
     ID_TYPE type_;
     unsigned int value_;
     std::vector<float> arguments_;
@@ -45,20 +66,46 @@ struct gcode_entry
 
     void print()
     {
-	switch(type_) {
-	case ID_TYPE::GCODE:
-	    printf("G%d X%f Y%f\n", value_, arguments_[0], arguments_[1]);
-	    break;
-	case ID_TYPE::MCODE:
-	    printf("M%d S%f\n", value_, arguments_[0]);
-	    break;
-	default:
-	    // don't current support and so don't print
-	    return;
-	}	
+        apply(
+              [](unsigned int v, float x, float y) {
+                  printf("G%d X%f Y%f\n", v, x, y);
+              },
+              [] (unsigned int v, float x) {
+                  printf("M%d S%f\n", v, x);
+        });
+        
+    }
+    
+    std::string to_string()
+    {
+        std::string str("");
+        apply(
+              [&str](unsigned int v, float x, float y) {
+                  str = "G" + to_str(v) + " X" + to_str(x) + " Y" + to_str(y) + "\n";
+              },
+              [&str] (unsigned int v, float x) {
+                  str = "M" + to_str(v) + " X" + to_str(x) + "\n";
+              });
+        
+        return str;
+    }
+    
+    bool is_type(ID_TYPE t)
+    {
+        return type_ == t;
+    }
+    
+    bool is_value(unsigned int v)
+    {
+        return value_ == v;
+    }
+    
+    float get_argument(unsigned int i)
+    {
+        return arguments_[i];
     }
 };
-    
+
 class gcode
 {
 private:
@@ -139,6 +186,13 @@ private:
     }
         
 public:
+    static const unsigned int pen_      = 300;
+    static const unsigned int pen_up_   = 50;
+    static const unsigned int pen_down_ = 30;
+
+    static const unsigned int move_to_  = 92;
+    static const unsigned int draw_     = 1;
+    
     gcode(std::string filename) throw(error_exception);
     
     ~gcode()
@@ -164,11 +218,22 @@ public:
 
     std::vector<std::shared_ptr<gcode_entry>>::iterator begin()
     {
-	return codes_.begin();
+        return codes_.begin();
     }
 
     std::vector<std::shared_ptr<gcode_entry>>::iterator end()
     {
-	return codes_.end();
+        return codes_.end();
+    }
+    
+    std::string to_string()
+    {
+        std::string str("");
+        
+        std::for_each (begin(), end(), [&str] (std::shared_ptr<gcode_entry> entry) {
+            str.append(entry->to_string());
+        });
+             
+        return str;
     }
 };

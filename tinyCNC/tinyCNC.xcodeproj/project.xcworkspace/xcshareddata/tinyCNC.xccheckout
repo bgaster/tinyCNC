@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3A0604F0-6B00-4A58-94A4-58462A4791B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>tinyCNC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0BD6E99D-2DE8-4984-B01A-6D0BE3594BAB</key>
+		<string>https://github.com/bgaster/arduino.git</string>
+		<key>B62223FE-0CC9-441D-AAF7-5D455A0BF3D9</key>
+		<string>https://github.com/bgaster/tinyCNC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>tinyCNC/tinyCNC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0BD6E99D-2DE8-4984-B01A-6D0BE3594BAB</key>
+		<string>../../../../arduino</string>
+		<key>B62223FE-0CC9-441D-AAF7-5D455A0BF3D9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bgaster/tinyCNC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B62223FE-0CC9-441D-AAF7-5D455A0BF3D9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0BD6E99D-2DE8-4984-B01A-6D0BE3594BAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>arduino</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B62223FE-0CC9-441D-AAF7-5D455A0BF3D9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tinyCNC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
