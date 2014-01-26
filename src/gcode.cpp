@@ -17,8 +17,8 @@
 #include <tuple>
 #include <algorithm>
 
-#include <gcode.hpp>
-#include <error_exception.hpp>
+#include "gcode.hpp"
+#include "error_exception.hpp"
 
 const std::string gcode::float_regex_("([+-]?[0-9]*\\.[0-9]+|[0-9]+)");
 const std::string gcode::int_regex_("([-+]?[0-9]*)");
@@ -47,7 +47,14 @@ bool gcode::parse_code(
 	    ID_TYPE::GCODE, 
 	    entry,
 	    "G1",
-	    { match_arg_t{"X", float_regex_} , match_arg_t{"Y", float_regex_} });
+	    { match_arg_t{"X", float_regex_} , match_arg_t{"Y", float_regex_} })
+	||
+	parse_type(
+               line,
+               ID_TYPE::GCODE,
+               entry,
+               "G92",
+               { match_arg_t{"X", float_regex_} , match_arg_t{"Y", float_regex_} });
 }
 
 gcode::gcode(std::string filename) throw(error_exception)

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Gaster, Benedict. All rights reserved.
 //
 
-#if 0
+
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -14,4 +14,3 @@
 @property (assign) IBOutlet NSWindow *window;
 
 @end
-#endif
