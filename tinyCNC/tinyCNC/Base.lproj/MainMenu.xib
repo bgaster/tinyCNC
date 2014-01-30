@@ -691,7 +691,7 @@
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cJ-ZD-S3L">
                         <rect key="frame" x="177" y="69" width="152" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Renderer tinyCNC" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kdi-Qn-vEZ">
+                        <buttonCell key="cell" type="push" title="Renderer tinyCNC" bezelStyle="rounded" alignment="center" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="Kdi-Qn-vEZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -702,7 +702,7 @@
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-cq-9mD">
                         <rect key="frame" x="330" y="69" width="149" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Renderer tinyWIN" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AiA-3m-N0h">
+                        <buttonCell key="cell" type="push" title="Renderer tinyWIN" bezelStyle="rounded" alignment="center" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="AiA-3m-N0h">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -710,6 +710,40 @@
                             <action selector="renderer_tinyWIN:" target="Xxd-NI-LM0" id="K8l-2O-dKT"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-7Q-i5x">
+                        <rect key="frame" x="291" y="36" width="73" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NGM-EC-Aau">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="do_clear:" target="Xxd-NI-LM0" id="IaC-Wx-azH"/>
+                        </connections>
+                    </button>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHD-DK-SAH">
+                        <rect key="frame" x="200" y="20" width="61" height="38"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="64" height="18"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Msh-58-pQL">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="GCode" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="EpW-7w-eu1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Logo" imagePosition="left" alignment="left" inset="2" id="cV7-c0-QBD">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
                 </subviews>
             </view>
         </window>
@@ -722,6 +756,9 @@
         <customObject id="Xxd-NI-LM0" customClass="Controller">
             <connections>
                 <outlet property="gcode_text_view_" destination="yLy-7L-Myb" id="07q-od-GJ4"/>
+                <outlet property="renderer_clear_button_" destination="b8w-7Q-i5x" id="oz9-D7-cHN"/>
+                <outlet property="renderer_tinyCNC_button_" destination="8cJ-ZD-S3L" id="gZs-7F-3j9"/>
+                <outlet property="renderer_tinyWIN_button_" destination="hYA-cq-9mD" id="pL2-TC-pc4"/>
             </connections>
         </customObject>
     </objects>

@@ -13,10 +13,15 @@
 @interface Controller : NSObject
 {
     IBOutlet NSTextView * gcode_text_view_;
+    IBOutlet NSButton * renderer_tinyCNC_button_;
+    IBOutlet NSButton * renderer_tinyWIN_button_;
+    IBOutlet NSButton * renderer_clear_button_;
 }
 
 - (IBAction)do_open:(id)sender;
 - (IBAction)renderer_tinyCNC:(id)sender;
 - (IBAction)renderer_tinyWIN:(id)sender;
+- (IBAction)do_clear:(id)sender;
+
 
 @end
