@@ -12,11 +12,15 @@ First compile and upload the Arduino sketch bot/bot.ino. Then, run the
 tinyCNC application and try loading the following G-code (from a text file):
 
 G92 X0.00 Y0.00 Z0.00
+
 M300 S30
 
 G1 X0.00 Y100.00 F600
+
 G1 X100.00 Y100.00 F600
+
 G1 X100.00 Y0.00 F600
+
 G1 X0.00 Y0.00 F600
 
 M300 S50
