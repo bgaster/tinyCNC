@@ -23,6 +23,7 @@
 		B506B406189222E500ACB031 /* controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = B506B405189222E500ACB031 /* controller.mm */; };
 		B506B40A18923C8500ACB031 /* globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B506B40918923C8500ACB031 /* globals.cpp */; };
 		B506B40D18923F9300ACB031 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B506B40C18923F9300ACB031 /* AppDelegate.mm */; };
+		B5DF6CA9189A225900F4B414 /* codeview.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5DF6CA8189A225900F4B414 /* codeview.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +56,10 @@
 		B506B3EA1891F11300ACB031 /* tinyCNCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tinyCNCTests.m; sourceTree = "<group>"; };
 		B506B3F61891F1F000ACB031 /* gldrawview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = gldrawview.mm; path = ../../src/gldrawview.mm; sourceTree = "<group>"; };
 		B506B3F81891F25900ACB031 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		B506B3FB1892195A00ACB031 /* arduino-serial.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = "arduino-serial.hpp"; path = "../../arduino/include/arduino-serial.hpp"; sourceTree = "<group>"; };
-		B506B3FC1892195A00ACB031 /* debug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = debug.hpp; path = ../../arduino/include/debug.hpp; sourceTree = "<group>"; };
-		B506B3FD1892195A00ACB031 /* error_exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = error_exception.hpp; path = ../../arduino/include/error_exception.hpp; sourceTree = "<group>"; };
 		B506B3FE189219BF00ACB031 /* gcode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gcode.hpp; path = ../../include/gcode.hpp; sourceTree = "<group>"; };
 		B506B3FF189219BF00ACB031 /* renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = renderer.hpp; path = ../../include/renderer.hpp; sourceTree = "<group>"; };
 		B506B400189219CD00ACB031 /* gcode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gcode.cpp; path = ../../src/gcode.cpp; sourceTree = "<group>"; };
 		B506B4031892229D00ACB031 /* gldrawview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gldrawview.h; path = ../../include/gldrawview.h; sourceTree = "<group>"; };
-		B506B404189222A800ACB031 /* gl_renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gl_renderer.hpp; path = ../../include/gl_renderer.hpp; sourceTree = "<group>"; };
 		B506B405189222E500ACB031 /* controller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = controller.mm; path = ../../src/controller.mm; sourceTree = "<group>"; };
 		B506B407189222EE00ACB031 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = controller.h; path = ../../include/controller.h; sourceTree = "<group>"; };
 		B506B4081892331300ACB031 /* globals.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = globals.hpp; path = ../../include/globals.hpp; sourceTree = "<group>"; };
@@ -70,6 +67,11 @@
 		B506B40B18923F9300ACB031 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B506B40C18923F9300ACB031 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		B540BCAB189381DC00FC5B6E /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = util.hpp; path = ../../include/util.hpp; sourceTree = "<group>"; };
+		B5D268401894E0A5001AC0F9 /* arduino-serial.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = "arduino-serial.hpp"; path = "../arduino/include/arduino-serial.hpp"; sourceTree = "<group>"; };
+		B5D268411894E0A5001AC0F9 /* debug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = debug.hpp; path = ../arduino/include/debug.hpp; sourceTree = "<group>"; };
+		B5D268421894E0A5001AC0F9 /* error_exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = error_exception.hpp; path = ../arduino/include/error_exception.hpp; sourceTree = "<group>"; };
+		B5DF6CA8189A225900F4B414 /* codeview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = codeview.mm; path = ../../src/codeview.mm; sourceTree = "<group>"; };
+		B5DF6CAA189A226900F4B414 /* codeview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = codeview.h; path = ../../include/codeview.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,6 @@
 				B506B4081892331300ACB031 /* globals.hpp */,
 				B506B40918923C8500ACB031 /* globals.cpp */,
 				B540BCAB189381DC00FC5B6E /* util.hpp */,
-				B506B404189222A800ACB031 /* gl_renderer.hpp */,
 				B506B3FF189219BF00ACB031 /* renderer.hpp */,
 				B506B3D81891F11300ACB031 /* Images.xcassets */,
 				B506B3C71891F11300ACB031 /* Supporting Files */,
@@ -185,9 +186,9 @@
 		B506B3FA1892192F00ACB031 /* Arduino */ = {
 			isa = PBXGroup;
 			children = (
-				B506B3FB1892195A00ACB031 /* arduino-serial.hpp */,
-				B506B3FC1892195A00ACB031 /* debug.hpp */,
-				B506B3FD1892195A00ACB031 /* error_exception.hpp */,
+				B5D268401894E0A5001AC0F9 /* arduino-serial.hpp */,
+				B5D268411894E0A5001AC0F9 /* debug.hpp */,
+				B5D268421894E0A5001AC0F9 /* error_exception.hpp */,
 			);
 			name = Arduino;
 			sourceTree = "<group>";
@@ -195,6 +196,8 @@
 		B506B40218921A4A00ACB031 /* CocoaStuff */ = {
 			isa = PBXGroup;
 			children = (
+				B5DF6CAA189A226900F4B414 /* codeview.h */,
+				B5DF6CA8189A225900F4B414 /* codeview.mm */,
 				B506B40B18923F9300ACB031 /* AppDelegate.h */,
 				B506B40C18923F9300ACB031 /* AppDelegate.mm */,
 				B506B407189222EE00ACB031 /* controller.h */,
@@ -307,6 +310,7 @@
 				B506B40A18923C8500ACB031 /* globals.cpp in Sources */,
 				B506B406189222E500ACB031 /* controller.mm in Sources */,
 				B506B401189219CD00ACB031 /* gcode.cpp in Sources */,
+				B5DF6CA9189A225900F4B414 /* codeview.mm in Sources */,
 				B506B3F71891F1F000ACB031 /* gldrawview.mm in Sources */,
 				B506B40D18923F9300ACB031 /* AppDelegate.mm in Sources */,
 				B506B3CD1891F11300ACB031 /* main.m in Sources */,

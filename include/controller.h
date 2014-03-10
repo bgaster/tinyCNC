@@ -1,5 +1,5 @@
 //
-//  gldrawview.h
+//  controller.h
 //  TinyCNC
 //
 //  Created by Gaster, Benedict on 1/23/14.
@@ -18,10 +18,14 @@
     IBOutlet NSButton * renderer_clear_button_;
 }
 
+- (void)clear;
+- (IBAction)progress_local_command:(id)sender;
+
 - (IBAction)do_open:(id)sender;
 - (IBAction)renderer_tinyCNC:(id)sender;
 - (IBAction)renderer_tinyWIN:(id)sender;
 - (IBAction)do_clear:(id)sender;
-
+- (IBAction)do_change_view_gcode:(id)sender;
+- (IBAction)do_change_view_logo:(id)sender;
 
 @end

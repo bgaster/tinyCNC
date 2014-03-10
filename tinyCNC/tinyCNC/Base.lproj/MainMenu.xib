@@ -164,7 +164,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1578"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -173,7 +173,7 @@
                         <rect key="frame" x="175" y="158" width="304" height="203"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </openGLView>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-hy-pXu">
+                    <scrollView identifier="code_view" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-hy-pXu">
                         <rect key="frame" x="-1" y="-1" width="176" height="362"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="ANO-19-jCB">
@@ -189,6 +189,9 @@
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="174" height="360"/>
                                     <size key="maxSize" width="463" height="10000000"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Xxd-NI-LM0" id="CiZ-G6-fvH"/>
+                                    </connections>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,13 +250,19 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="GCode" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="RME-Rg-zyo">
+                                <buttonCell type="radio" title="GCode" imagePosition="left" alignment="left" state="on" inset="2" id="RME-Rg-zyo">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="do_change_view_gcode:" target="Xxd-NI-LM0" id="sv4-3Q-NFu"/>
+                                    </connections>
                                 </buttonCell>
-                                <buttonCell type="radio" title="Logo" imagePosition="left" alignment="left" inset="2" id="6o1-1K-ndH">
+                                <buttonCell type="radio" title="Logo" imagePosition="left" alignment="left" tag="1" inset="2" id="6o1-1K-ndH">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="do_change_view_logo:" target="Xxd-NI-LM0" id="rqO-sO-kl9"/>
+                                    </connections>
                                 </buttonCell>
                             </column>
                         </cells>

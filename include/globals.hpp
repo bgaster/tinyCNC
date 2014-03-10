@@ -16,4 +16,5 @@
 
 extern std::shared_ptr<gcode> gcode_g;
 extern std::shared_ptr<renderer> renderer_g;
-extern std::shared_ptr<arduino::serial> aserial_port_g;
+extern std::shared_ptr<renderer> renderer_bot_g;
+extern bool gcode_view_g;
